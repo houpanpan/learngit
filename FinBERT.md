@@ -8,6 +8,9 @@
 
 github项目地址：
 
+![image](FinBERT_pics/report_data.png)
+sjodfjosdfjojosdf
+![image](file:///home/houpan/learngit/FinBERT_pics/wnagluojiegou%20(copy%201).png)
 **模型下载地址：** tensorflow版：         pytorch版：
 
 **使用方式：** 使用方法很简单，google发布的bert模型怎么用这个怎么用，只需要将模型下载后，更改下模型的读取路径即可。
