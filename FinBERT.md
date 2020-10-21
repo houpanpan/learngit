@@ -87,7 +87,8 @@ XLA 全称为加速线性运算，如果在 Tensorflow 中开启了 XLA，那么
 ### 3.1.2. 数据集
 
 该任务的数据集共包含 3000 条样本，其中训练集数据约 1100 条，测试集数据约 1900条，各类别分布情况如下：
-![image](file:///home/houpan/FinBERT_pics/classification_data.png)
+![image](file:///home/houpan/learngit/FinBERT_pics/classification_data.png)
+
 ### 3.1.3. 实验结果
 task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | ---- | :------: | :-------------: | :-----:
