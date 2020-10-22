@@ -26,6 +26,7 @@ FinBERT 1.0 所采用的预训练语料主要包含三大类金融领域的语�
 对于上述三类语料，在金融业务专家的指导下，我们对于各类语料的重要部分进行筛选、预处理之后得到最终用于模型训练的语料，共包含 30亿 Tokens，这一数量超过了原生中文BERT的训练规模。
 ## 2.3. 预训练方式
 **预训练框架图**
+
 ![image](file:///home/houpan/FinBERT_pics/wnagluojiegou.png)
 
 如上图所示，FinBERT 采用了两大类预训练任务，分别是字词级别的预训练和任务级别的预训练。两类预训练任务的细节详述如下：
@@ -90,6 +91,7 @@ XLA 全称为加速线性运算，如果在 Tensorflow 中开启了 XLA，那么
 ### 3.1.2. 数据集
 
 该任务的数据集共包含 3000 条样本，其中训练集数据约 1100 条，测试集数据约 1900条，各类别分布情况如下：
+
 ![image](file:///home/houpan/learngit/FinBERT_pics/classification_data.png)
 
 ### 3.1.3. 实验结果
@@ -106,6 +108,7 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 
 该任务的数据集共包含 1200 条样本，其中训练集数据约 400 条，测试集数据约 800条。训练集中的各类别数目在 5~15 条之间，属于典型的小样本任务。
 各类别分布情况如下：
+
 ![image](file:///home/houpan/FinBERT_pics/report_data.png)
 
 
@@ -122,7 +125,9 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 该任务共有 4个类别，对应不同的情绪极性和强度。
 ### 3.3.2. 数据集
 该任务的数据集共包含 2000 条样本，其中训练集数据约 1300 条，测试集数据约 700条，各类别分布情况如下：
+
 ![image](file:///home/houpan/FinBERT_pics/sentiment_data.png)
+
 ### 3.3.3. 实验结果
 task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | ---- | :------: | :-------------: | :-----:
@@ -132,14 +137,17 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 ### 3.4.1. 实验任务
 
 此任务来自于熵简科技知识图谱相关的产品，其核心任务是对金融类文本中出现的实体（公司或人名）进行实体识别和提取，主要用在知识图谱的实体提取和实体链接环节。
+
 ### 3.4.2. 数据集
 
 数据集共包含 24000 条样本，其中训练集数据共3000条，测试集数据共21000条。
+
 ### 3.4.3. 结果展示
-task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
+
+TASK\MODEL      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | :----: | :------: | :-------------: | :-----:
 公司名称实体识别      | 0.865 | 0.879 | 0.894 | **0.922**
-人名实体识别      | 0.887 | 0.887 | 0.91 | **0.917**
+人物名称实体识别      | 0.887 | 0.887 | 0.91 | **0.917**
 
 ## 3.5. 总结
 
@@ -151,6 +159,7 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 本文详细介绍了 FinBERT 的开源背景、训练细节和四类对比实验结果，欢迎其他从相关领域的团队提供更多、更丰富的对比实验和应用案例，让我们共同推进自然语言处理技术在金融领域的应用和发展。接下来，熵简 AI 团队会从预料规模、训练时间、预训练方式上进行更多的创新和探索，以期发展出更懂金融领域的预训练模型，并在合适时机发布 FinBERT 2.0、FinBERT 3.0，敬请期待。
 
 任何问题，欢迎与团队负责人联系，邮箱：liyu@entropyreduce.com
+
 # 5. 参考文献
 
     [1]Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2018. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. (2018). https://doi.org/arXiv:1811.03600v2 arXiv:1810.04805
