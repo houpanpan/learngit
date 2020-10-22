@@ -41,7 +41,7 @@ Whole Word Masking (wwm)，一般翻译为全词 Mask 或整词 Mask，出是 Go
 
 在谷歌原生的中文 BERT 中，输入是以字为粒度进行切分，没有考虑到领域内共现单词或词组之间的关系，从而无法学习到领域内隐含的先验知识，降低了模型的学习效果。我们将全词Mask的方法应用在金融领域语料预训练中，即对组成的同一个词的汉字全部进行Mask。首先我们从金融词典、金融类学术文章中，通过自动挖掘结合人工核验的方式，构建出金融领域内的词典，约有10万词。然后抽取预语料和金融词典中共现的单词或词组进行全词 Mask预训练，从而使模型学习到领域内的先验知识，如金融学概念、金融概念之间的相关性等，从而增强模型的学习效果。
 
-Next Sentence Prediction（NSP）
+**Next Sentence Prediction（NSP）**
 
 为了训练一个理解句子间关系的模型，引入一个下一句预测任务。具体方式可参考BERT原始文献，Google的论文结果表明，这个简单的任务对问答和自然语言推理任务十分有益，我们在预训练过程中也发现去掉NSP任务之后对模型效果略有降低，因此我们保留了NSP的预训练任务，学习率采用Google 官方推荐的2e-5，warmup-steps为 10000 steps。
 
@@ -105,8 +105,9 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 ### 3.2.2. 数据集
 
 该任务的数据集共包含 1200 条样本，其中训练集数据约 400 条，测试集数据约 800条。训练集中的各类别数目在 5~15 条之间，属于典型的小样本任务。
-![image](file:///home/houpan/FinBERT_pics/report_data.png)
 各类别分布情况如下：
+![image](file:///home/houpan/FinBERT_pics/report_data.png)
+
 
 ### 3.2.3. 实验结果
 task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
