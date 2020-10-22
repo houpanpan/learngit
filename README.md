@@ -95,7 +95,7 @@ XLA 全称为加速线性运算，如果在 Tensorflow 中开启了 XLA，那么
 ![image](file:///home/houpan/learngit/FinBERT_pics/classification_data.png)
 
 ### 3.1.3. 实验结果
-task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
+TASK\MODEL     | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | ---- | :------: | :-------------: | :-----:
 金融短讯类型分类  | 0.867（0.874） | 0.867（0.877） | 0.877（0.885） | **0.895（0.897）**
 
@@ -113,7 +113,8 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 
 
 ### 3.2.3. 实验结果
-task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
+
+TASK\MODEL      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | ---- | :------: | :-------------: | :-----:
 金融短讯行业分类  | 0.939（0.942） | 0.932（0.942） | 0.938（0.942） | **0.951（0.952）**
 		
@@ -123,13 +124,15 @@ task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT
 此任务来自于熵简科技金融质控类相关产品，其核心任务是针对金融事件或标的的评述性文本按照文本内容进行金融情感分类，并用在后续的市场情绪观察和个股相关性分析中。
 
 该任务共有 4个类别，对应不同的情绪极性和强度。
+
 ### 3.3.2. 数据集
 该任务的数据集共包含 2000 条样本，其中训练集数据约 1300 条，测试集数据约 700条，各类别分布情况如下：
 
 ![image](file:///home/houpan/FinBERT_pics/sentiment_data.png)
 
 ### 3.3.3. 实验结果
-task\model      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
+
+TASK\MODEL      | BERT | BERT-wwm | RoBERTa-wwm-ext | FinBERT 
 --------------  | ---- | :------: | :-------------: | :-----:
 金融情绪分类  | 0.862（0.866） | 0.85（0.860） | 0.867（0.867） | **0.895（0.896）**
 	
